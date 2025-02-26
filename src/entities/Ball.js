@@ -129,7 +129,7 @@ export class Ball {
     freeze() {
         this.isFrozen = true;
         this.velocity.set(0, 0);
-        this.acceleration.set(0, a,0);
+        this.acceleration.set(0, 0);
     }
 
     /**

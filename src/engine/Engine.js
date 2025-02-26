@@ -1,4 +1,5 @@
 import { RenderingSystem } from './RenderingSystem.js';
+import { PhysicsSystem } from './PhysicsSystem.js'; // Import the physics system
 import { Ball } from '../entities/Ball.js';
 import { Config } from '../utils/Config.js';
 import { RGB } from '../utils/RGB.js';
@@ -14,6 +15,7 @@ export class Engine {
     constructor(canvas) {
         // Systems
         this.renderingSystem = new RenderingSystem(canvas);
+        this.physicsSystem = new PhysicsSystem(); // Add physics system
         
         // Entity collections
         this.balls = [];
@@ -66,8 +68,11 @@ export class Engine {
         // Update all balls
         this.balls.forEach(ball => ball.update(deltaTime));
         
-        // Basic boundary checks (keep balls within canvas)
+        // Update physics (collisions)
         const dimensions = this.renderingSystem.getCanvasDimensions();
+        this.physicsSystem.update(this.balls, deltaTime, dimensions);
+        
+        // Basic boundary checks (keep balls within canvas)
         this.balls.forEach(ball => {
             // Check X boundaries
             if (ball.position.x - ball.size < 0) {

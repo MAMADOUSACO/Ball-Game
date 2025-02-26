@@ -1,0 +1,26 @@
+{
+  "name": "ball-game",
+  "version": "1.0.0",
+  "description": "A code that allows the user through use of API to easily generate their own \"satisfying ball simulation\".",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAMADOUSACO/Ball-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAMADOUSACO/Ball-Game/issues"
+  },
+  "homepage": "https://github.com/MAMADOUSACO/Ball-Game#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
