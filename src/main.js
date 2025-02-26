@@ -1,6 +1,6 @@
-import { Vector2D } from '../utils/Vector2D.js';
-import { Quadtree } from '../utils/Quadtree.js';
-import { Config } from '../utils/Config.js';
+import { Vector2D } from './utils/Vector2D.js';
+import { Quadtree } from './utils/Quadtree.js';
+import { Config } from './utils/Config.js';
 
 /**
  * Physics system that handles collision detection and resolution
